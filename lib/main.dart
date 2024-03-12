@@ -8,6 +8,6 @@ class ContactsApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MyContact();
+    return MyContact();
   }
 }

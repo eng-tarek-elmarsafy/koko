@@ -29,9 +29,9 @@ if (flutterVersionName == null) {
    }
 
 android {
-    compileSdkVersion 34
     namespace "com.example.mycontactsapp"
-    compileSdkVersion flutter.compileSdkVersion
+    compileSdkVersion 34
+    //compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
     compileOptions {

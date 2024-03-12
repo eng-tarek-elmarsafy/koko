@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:mycontactsapp/social_media_icon.dart';
+import 'package:mycontactsapp/grid.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+// ignore: must_be_immutable
 class MyContact extends StatelessWidget {
   MyContact({
     super.key,
@@ -78,20 +79,7 @@ class MyContact extends StatelessWidget {
               const SizedBox(
                 height: 10,
               ),
-              GridView.builder(
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 3,
-                ),
-                itemCount: socialMedia.length,
-                itemBuilder: (context, index) {
-                  return SocialMediaIcon(
-                    MediaIcon: socialMedia.keys.toList()[index],
-                    MediaUrl: socialMedia.values.toList()[index],
-                  );
-                },
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-              ),
+              GridsoCialMedia(socialMedia: socialMedia),
             ],
           ),
         ),

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:mycontactsapp/start_madia.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SocialMediaIcon extends StatelessWidget {
   final String MediaIcon;
   final String MediaUrl;
+
   const SocialMediaIcon({
     required this.MediaIcon,
     required this.MediaUrl,
@@ -21,7 +23,12 @@ class SocialMediaIcon extends StatelessWidget {
           backgroundImage: AssetImage('assets/image/$MediaIcon'),
         ),
         onTap: () {
-          launchUrl(Uri.parse(MediaUrl),);
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => StartMadia(MediaUrl: MediaUrl),
+            ),
+          );
         },
       ),
     );
