@@ -23,12 +23,29 @@ class SocialMediaIcon extends StatelessWidget {
           backgroundImage: AssetImage('assets/image/$MediaIcon'),
         ),
         onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => StartMadia(MediaUrl: MediaUrl),
-            ),
+          showModalBottomSheet(
+            context: context,
+            builder: (context) {
+              return ElevatedButton(
+                style: const ButtonStyle(
+                    backgroundColor:
+                        MaterialStatePropertyAll(Colors.deepOrange),),
+                onPressed: () {
+                  launchUrl(Uri.parse(MediaUrl));
+                },
+                child: const Text(
+                  "Start Madia",
+                  style: TextStyle(fontSize: 35, color: Colors.white),
+                ),
+              );
+            },
           );
+          // Navigator.push(
+          //   context,
+          //   MaterialPageRoute(
+          //     builder: (context) => StartMadia(MediaUrl: MediaUrl),
+          //   ),
+          //);
         },
       ),
     );

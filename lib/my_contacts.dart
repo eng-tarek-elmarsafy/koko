@@ -53,7 +53,7 @@ class MyContact extends StatelessWidget {
                 ),
               ),
               Row(
-                mainAxisAlignment: MainAxisAlignment.center,
+                mainAxisAlignment: MainAxisAlignment.center, 
                 children: [
                   const Text(
                     "01091716644",
